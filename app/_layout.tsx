@@ -13,6 +13,7 @@ import { initializeDatabase } from './database/database';
 import { UserProvider } from './userContext';
 import { downloadVideo,clearDownloadedVideos } from "./video/videoDownlaoder";
 import { ProgressBar } from 'react-native-paper';
+import SyncToCloud from '@/components/SyncToCloud';
 
 
 // Prevent auto-hide at the start
@@ -160,6 +161,7 @@ export default function RootLayout() {
             <Stack.Screen name="login" options={{ headerShown: false }} />
             <Stack.Screen name="dashboard" options={{ headerShown: false }} />
           </Stack>
+          <SyncToCloud />
           <StatusBar style="light" />
         </UserProvider>
       </SQLiteProvider>
